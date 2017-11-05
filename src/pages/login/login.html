@@ -14,5 +14,19 @@
 
 
 <ion-content padding>
+  <form class="form-field list" (ngSubmit)="formsubmit()">
+      
+      <span class="error">{{error_msg}}</span>
 
+      <ion-item>
+          
+          <ion-input [ngModelOptions]="{standalone: true}" type="text" [(ngModel)]="user.game"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-input [ngModelOptions]="{standalone: true}" type="password" [(ngModel)]="user.passk"></ion-input>
+        </ion-item>
+
+        <button type="submit" block>Login</button>  
+
+  </form>
 </ion-content>

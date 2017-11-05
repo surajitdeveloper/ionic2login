@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-//import { FormBuilder, Control, ControlGroup, Validators, FORM_DIRECTIVES } from '@angular/forms';
 
 
 /**
@@ -22,6 +21,13 @@ export class LoginPage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad LoginPage');
+  }
+
+  error_msg: string =  "Please fill the fields";
+  user = {};
+  formsubmit()
+  {
+    alert("submitted - " + JSON.stringify(this.user));
   }
 
 }
