@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
+import { MyaccountPage } from '../myaccount/myaccount';
 
 /**
  * Generated class for the LoginPage page.
@@ -27,7 +27,23 @@ export class LoginPage {
   user = {};
   formsubmit()
   {
-    alert("submitted - " + JSON.stringify(this.user));
+    
+    if(this.user.game == undefined || 
+      this.user.game == "" ||
+    this.user.passk == undefined ||
+  this.user.passk == "")
+  {
+    this.error_msg = "Please inser username and password";
   }
+  else{
+    this.error_msg = "";
+    alert("submitted - " + JSON.stringify(this.user));
+    //let navdata = {userid: 1, email: "", username: ""};
+    //this.navCtrl.push(MyaccountPage,navdata);
+  }
+    
+  }
+
+
 
 }

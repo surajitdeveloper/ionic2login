@@ -20,6 +20,8 @@ export class MyaccountPage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad MyaccountPage');
+    let user_id = this.navParams.get("userid");
+    alert(user_id);
   }
 
 }
